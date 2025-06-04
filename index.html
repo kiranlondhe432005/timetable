@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedulr – Your Smart Scheduler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #00bcd4, #005a5a);
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+    }
+
+    .waves {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://svgshare.com/i/xrR.svg') repeat-x;
+      bottom: 0;
+      animation: moveWaves 10s linear infinite;
+      opacity: 0.1;
+    }
+
+    @keyframes moveWaves {
+      from { background-position-x: 0; }
+      to { background-position-x: 1000px; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .mascot {
+      width: 130px;
+      height: 130px;
+      background: url('logo.jpg') no-repeat center/contain;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .typing {
+      font-size: 16px;
+      margin-bottom: 30px;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .card-btn {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 15px 25px;
+      border-radius: 15px;
+      color: white;
+      font-size: 18px;
+      margin: 10px 0;
+      width: 80%;
+      max-width: 300px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 24px; }
+      .typing { font-size: 14px; }
+      .card-btn { font-size: 16px; padding: 12px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="waves"></div>
+
+  <div class="container">
+    <div class="mascot"></div>
+    <h1>Welcome to Schedulr</h1>
+    <div class="typing">Your Smart Timetable Companion</div>
+
+    <div class="card-btn" onclick="location.href='login_teacher.html'">
+      👨‍🏫 Login as Teacher
+    </div>
+    <div class="card-btn" onclick="location.href='student_dashboard.html'">
+      📚 View as Student
+    </div>
+  </div>
+
+</body>
+</html>

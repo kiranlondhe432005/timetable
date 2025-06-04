@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Timetable Dashboard</title>
+  <link rel="stylesheet" href="admin_dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Timetable Dashboard</h1>
+
+    <div class="select-day">
+      <label for="daySelect">Select Day:</label>
+      <select id="daySelect">
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+      </select>
+    </div>
+
+    <div class="timetable-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Teacher</th>
+            <th>Subject</th>
+            <th>Hall</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="timetableBody">
+          <!-- Timetable rows will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="button-group">
+      <button id="addSlotBtn">
+        <i class="fas fa-plus"></i> Add New Slot
+      </button>
+      <button id="submitBtn">
+        <i class="fas fa-check"></i> Submit
+      </button>
+      <button id="resetBtn">
+        <i class="fas fa-undo"></i> Reset
+      </button>
+      <button id="copyMondayBtn">
+        <i class="fas fa-copy"></i> Copy Monday's Timetable
+      </button>
+      <button id="downloadCsvBtn">
+        <i class="fas fa-download"></i> Download CSV
+      </button>
+    </div>
+
+    <div class="add-teacher">
+      <a href="add_teacher.html">
+        <button id="addTeacherBtn">
+          <i class="fas fa-user-plus"></i> Add Teacher
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+  <!-- FontAwesome CDN for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

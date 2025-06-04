@@ -1,0 +1,285 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.select-day {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #3498db;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+select:hover {
+  border-color: #8e44ad;
+}
+
+.timetable-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  color: #333;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table th {
+  background-color: #3498db;
+  color: #fff;
+}
+
+table td {
+  transition: 0.3s ease;
+}
+
+table td:hover {
+  background-color: #ecf0f1;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+button {
+  background-color: #008080;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 14px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  max-width: 250px; /* Limit the maximum width on larger screens */
+}
+
+button i {
+  font-size: 18px;
+  width: auto;
+}
+
+button:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(1.02);
+  box-shadow: none;
+}
+
+.add-teacher {
+  margin-top: 15px;
+}
+
+.add-teacher button {
+  background-color: #007bff;
+  width: auto;
+}
+
+.add-teacher button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  select, button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  table th, table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .button-group {
+    gap: 10px;
+  }
+
+  .timetable-container {
+    overflow-x: scroll;
+  }
+
+  button {
+    width: auto; /* Button takes 48% width on tablets and smaller screens */
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  select {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 12px;
+    width: 100%; /* Buttons will take full width on mobile screens */
+  }
+
+  table th, table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .button-group {
+    gap: 8px;
+  }
+
+  .timetable-container {
+    overflow-x: scroll;
+  }
+
+  .deleteBtn{
+    width: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  table th, table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  select, button {
+    font-size: 14px;
+    padding: 10px;
+    width: 50%;
+
+  }
+
+  .button-group {
+    gap: 6px;
+  }
+
+  .add-teacher {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  select, button {
+    font-size: 13px;
+    padding: 8px;
+    width: 50%;
+    
+  }
+
+  .deleteBtn{
+    width: auto;
+  }
+  table th, table td {
+    font-size: 11px;
+    padding: 5px;
+  }
+
+  .button-group {
+    gap: 6px;
+  }
+
+  .add-teacher button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
